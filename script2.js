@@ -4,6 +4,10 @@ let popup = document.getElementById('popup');
 let popupdraw = document.getElementById('popupdraw');
 let gameOver = false;
 
+const xcards = [];
+const ocards = [];
+
+
 const currentPlayerSpan = document.getElementById('currentPlayer');
 const winnerSpan = document.getElementById('winner');
 const cards = document.querySelectorAll(".card img");
@@ -17,17 +21,23 @@ function turnCard(card) {
         return; 
     }
     if (currentPlayer == 0) {
-        img.src = 'images/cross.png';
+        img.src = 'images/cross.png'; //every time an x is placed
+        xcards.push(img); // x array is updated +1
     } 
     if (currentPlayer == 1 ) {
-        img.src = 'images/circle.png';
+        img.src = 'images/circle.png'; //every time an o is placed
+        ocards.push(img); //o array is updated +1
     }
 
     img.style.display = "block";
+
+    if (xcards.length > 3 || ocards.length > 3) {
+        movingPhase();
+    }
    
-    win();
-    currentPlayer = (currentPlayer + 1) % players.length;
     
+    currentPlayer = (currentPlayer + 1) % players.length;
+    win();
     currentPlayerSpan.textContent = players[currentPlayer];
     
 }
@@ -89,3 +99,18 @@ function closePopupDraw() {
     resetGame();
 }
 
+
+function movingPhase(){
+    if (currentPlayer == 0){
+        xcards[0].src = '';
+        xcards[0].style.display = "none";
+        xcards.splice(0, 1);
+        xcards.push();
+    }
+    if (currentPlayer == 1){
+        ocards[0].src = '';
+        ocards[0].style.display = "none";
+        ocards.splice(0, 1);
+        ocards.push();
+    }
+}

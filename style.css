@@ -19,6 +19,19 @@ body{
     top: 50px;
     text-align: center;
     color: white;
+    
+}
+header div{
+    display: inline-block;
+    text-align: center;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+.header-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
 }
 .game-board{
     width: 400px;
@@ -63,7 +76,7 @@ body{
 }
 .button{
     padding: 10px 20px;
-    background-color: #E2A3C7;
+    background-color: #A08E9F;
     color: white;
     border: none;
     border-radius: 5px;

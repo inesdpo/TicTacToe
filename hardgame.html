@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Tic Tac Toe</h1>
+            <h4>Hard mode</h4>
+            <!-- <p>Player 1: X</p>
+            <p>Player 2: O</p>  -->
+            <p>Current Player: <span id="currentPlayer">X</span></p>
+        </div>
+       
+        <div>
+            <button class="header-button" onclick="location.href='index.html'"><img src="images/home-2.png" alt=""></button>
+        </div>
+    </header>
+    <section class="game-board">
+        <ul class="cards">
+            <li onclick="turnCard(this)" class="card" id="0">
+                <img src="" alt="">
+            </li>
+            <li onclick="turnCard(this)" class="card" id="1">
+                <img src="" alt="">
+            </li>
+            <li onclick="turnCard(this)" class="card" id="2">
+                <img src="" alt="">
+            </li>
+            <li onclick="turnCard(this)" class="card" id="3">
+                <img src="" alt="">
+            </li>
+            <li onclick="turnCard(this)" class="card" id="4">
+                <img src="" alt="">
+            </li>
+            <li onclick="turnCard(this)" class="card" id="5">
+                <img src="" alt="">
+            </li>
+            <li onclick="turnCard(this)" class="card" id="6">
+                <img src="" alt="">
+            </li>
+            <li onclick="turnCard(this)" class="card" id="7">
+                <img src="" alt="">
+            </li>
+            <li onclick="turnCard(this)" class="card" id="8">
+                <img src="" alt="">
+            </li>
+        </ul>
+    </section>
+
+    <div class="popup" id="popup">   
+        <h2>Player <span id="winner">X</span> Wins!</h2>
+        <button class="button" onclick="resetGame(),closePopup()">Play Again</button>
+    </div>
+
+    <div class="resetbtn">
+        <button class="button" onclick="resetGame()">Reset Game</button>
+    </div>
+    
+    <script src="script2.js"></script>
+</body>
+</html>
