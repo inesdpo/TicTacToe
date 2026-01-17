@@ -13,14 +13,14 @@ function turnCard(card) {
         return;
     }
     const img = card.querySelector("img");
-    if (img.src.includes('./images/cross.png') || img.src.includes('./images/circle.png')) {
+    if (img.src.includes('images/cross.png') || img.src.includes('images/circle.png')) {
         return; 
     }
     if (currentPlayer == 0) {
-        img.src = './images/cross.png';
+        img.src = 'images/cross.png';
     } 
     if (currentPlayer == 1 ) {
-        img.src = './images/circle.png';
+        img.src = 'images/circle.png';
     }
 
     img.style.display = "block";
