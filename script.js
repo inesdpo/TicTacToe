@@ -17,10 +17,10 @@ function turnCard(card) {
         return; 
     }
     if (currentPlayer == 0) {
-        img.src = 'cross.png';
+        img.src = 'images/cross.png';
     } 
     if (currentPlayer == 1 ) {
-        img.src = 'circle.png';
+        img.src = 'images/circle.png';
     }
 
     img.style.display = "block";
