@@ -25,8 +25,9 @@ function turnCard(card) {
 
     img.style.display = "block";
    
-    currentPlayer = (currentPlayer + 1) % players.length;
     win();
+    currentPlayer = (currentPlayer + 1) % players.length;
+    
     currentPlayerSpan.textContent = players[currentPlayer];
     
 }
